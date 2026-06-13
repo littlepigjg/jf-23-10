@@ -8,6 +8,7 @@ import StarMap from '../components/StarMap';
 import TradePanel from '../components/TradePanel';
 import UpgradePanel from '../components/UpgradePanel';
 import QuestPanel from '../components/QuestPanel';
+import TradeRoutePanel from '../components/TradeRoutePanel';
 import { rollTravelEvent } from '../utils/travelEngine';
 import { createInitialBattleState } from '../utils/battleEngine';
 import type { GameState } from '../types/game';
@@ -91,6 +92,8 @@ export default function GamePage() {
         return <StarMap />;
       case 'trade':
         return <TradePanel />;
+      case 'traderoute':
+        return <TradeRoutePanel />;
       case 'upgrade':
         return <UpgradePanel />;
       case 'quests':

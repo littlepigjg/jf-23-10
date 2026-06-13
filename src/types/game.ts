@@ -154,5 +154,5 @@ export interface GameState {
   travelState: TravelState | null;
   battleState: BattleState | null;
   eventState: GameEvent | null;
-  currentView: 'starmap' | 'trade' | 'upgrade' | 'quests';
+  currentView: 'starmap' | 'trade' | 'upgrade' | 'quests' | 'traderoute';
 }

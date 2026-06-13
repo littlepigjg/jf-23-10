@@ -17,6 +17,13 @@ export interface SimulatedLeg extends LegTrade {
   legProfit: number;
   cargoUsed: number;
   cashRemaining: number;
+  travelTicks: number;
+  priceImpactOnBuy: number;
+  priceImpactOnSell: number;
+  sdBeforeBuy: number;
+  sdAfterBuy: number;
+  sdBeforeSell: number;
+  sdAfterSell: number;
 }
 
 export interface TradeRoute {
@@ -34,11 +41,18 @@ export interface TradeRoute {
   actualReturnRate: number;
   actualROI: number;
 
+  dynamicTotalProfit: number;
+  dynamicTotalInvestment: number;
+  dynamicReturnRate: number;
+  dynamicROI: number;
+  totalTravelTicks: number;
+
   totalDistance: number;
   profitPerDistance: number;
   routeLength: number;
   isFeasible: boolean;
   infeasibleReason?: string;
+  priceDropWarning?: string;
 }
 
 export interface BestTrade {
